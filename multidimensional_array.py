@@ -30,7 +30,10 @@ def create_list_of_dicts():
         
     
     num = random_num()
+
+    # TEMP:
     # print(f'num: {num}')
+
     while num > 0:
 
 
@@ -77,7 +80,7 @@ print('\n\n')
 def sort_by_key(data, key):
     return sorted(data, key=lambda x: x[key])
 
-# Sort the unique array by 'ID'
+# Sort the unique_array by 'ID'
 sorted_unique_array = sort_by_key(unique_array, 'id')
 
 print("SORTED_UNIQUE_ARRAY", end='\n\n')

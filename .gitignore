@@ -3,11 +3,7 @@
 .AppleDouble
 .LSOverride
 
-# Icon must end with two \r
-Icon
-
-
-# Thumbnails
+# macOS metadata files
 ._*
 
 # Files that might appear in the root of a volume
@@ -165,4 +161,4 @@ dmypy.json
 cython_debug/
 
 # PyCharm
-#.idea/
+.idea/
