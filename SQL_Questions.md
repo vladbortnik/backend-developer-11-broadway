@@ -52,7 +52,9 @@ CREATE TABLE evaluations (
 To optimize `bio` field search I would use **hashing**:
 
 - To do that, we need to add an additional indexed column to store the hash value of the `bio`. Then populate the column using a hashing algorithm and finally index the column to optimize it for a search purpuses. Here is the queries to acomplish it:
+
 <br>
+
 ```sql
     ALTER TABLE evaluations
     ADD COLUMN bio_hash VARCHAR(64);
@@ -61,7 +63,9 @@ To optimize `bio` field search I would use **hashing**:
     UPDATE evaluations
     SET bio_hash = SHA2(bio, 256);
 ```
+
 - Finally:
+
 ```sql
     CREATE INDEX bio_hash_index ON evaluations(bio-hash)
 ```
